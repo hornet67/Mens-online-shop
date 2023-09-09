@@ -1,0 +1,64 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+{% block title %}Formal Shirt{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1>
+  <center><b>Formal Shirt</b></center>
+</h1>
+<!--breadcrumb-->
+<div class="container">
+  <ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item active">
+      <a href="{% url 'home' %}">Home</a>
+    </li>
+
+    <li class="breadcrumb-item active">Formal Shirt</li>
+  </ol>
+</div>
+
+<!--card with data -->
+
+
+
+<div class="container  " style=" background:#E0E0E0">
+
+<div class="row m-5 ">
+  {% for item in data %}
+
+         <div class="card mx-auto col-md-6 col-lg-4 col-sm-12 m-5">
+
+           <div class="m-4">
+                         <img class='mx-auto img-thumbnail'
+                src="https://i.imgur.com/pjITBzX.jpg"
+                width="auto" height="auto"/>
+            <div class="card-body text-center mx-auto">
+                <div class=''>
+                    <h5 class="card-title font-weight-bold">{{item.title}}</h5>
+                    <p class="card-text">TK {{item.price}}</p>
+                    <a href="#" class="btn details px-auto">view details</a><br />
+                    <a href="#" class="bg-dark text-white btn cart px-auto"><b>ADD TO CART</b></a>
+                </div>
+            </div>
+
+
+           </div>
+        </div>
+
+
+
+  {% endfor %}
+    </div>
+
+</div>
+
+
+
+{% endblock %}
