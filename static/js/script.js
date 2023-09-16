@@ -1,1 +1,2 @@
-console.log("hello world")
+x = 23
+console.log(x);

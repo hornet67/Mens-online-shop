@@ -8,7 +8,9 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('formal/',views.formal_shirt, name ='formal'),
     path('cart/',views.cart, name='cart'),
-    path('checkout/',views.checkout, name='checkout')
+    path('checkout/',views.checkout, name='checkout'),
+    path('login/',views.login_page, name='login'),
+    path('signup/', views.signup_page, name='signup')
 ]
 
 urlpatterns += static(settings.STATIC_URL,document_root =  settings.STATIC_ROOT)
